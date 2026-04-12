@@ -1,5 +1,5 @@
 # CurlX
-My Curlx Script
+My Curlx Script (Credit for CurlX original script : https://github.com/devblack)
 
 
 /require/main.php => 
