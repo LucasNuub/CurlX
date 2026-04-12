@@ -1,4 +1,6 @@
 # CurlX
-My Curlx Script\n\n
-/require/main.php
+My Curlx Script
+
+
+/require/main.php => 
 Includes all the functioning of every other files, every file is directory linked with that sole api.
