@@ -1,0 +1,81 @@
+20061 Michigan Ave,Dearborn,Wayne,MI,48124-2361
+557 Warrenton Rd SE,Crawfordville,Taliaferro,GA,30631-3244
+3215 4 Mile Rd NE,Grand Rapids,Kent,MI,49525-9635
+210 Alford Dr,Fayetteville,Fayette,GA,30215-3073
+691 Irving Ave,Astoria,Clatsop,OR,97103-4828
+24041 Michigan Ave,Dearborn,Wayne,MI,48124-1834
+11914 Astoria Blvd Ste 45,Houston,Harris,TX,77089-6046
+235 Meeker Ave,Utica,Oneida,NY,13502-5821
+1080 Broadway,Normal,McLean,IL,61761-3705
+1665 Ave Victor M Labiosa Ste 308,San Juan,San Juan,PR,00926-4151
+1405 Old Rd,Clymer,Chautauqua,NY,14724-9641
+1100 Garrett St,Brenham,Washington,TX,77833-3847
+950 El Camino Real,San Bruno,San Mateo,CA,94066-3138
+2700 Junipero Serra Blvd,Daly City,San Mateo,CA,94015-1634
+250 10th St SW,Jamestown,Stutsman,ND,58401-5236
+2100 Pacific Ave,Atlantic City,Atlantic,NJ,08401-6612
+14021 Noel Rd,Dallas,Dallas,TX,75240-7310
+1776 University Ave Rm UES103,Honolulu,Honolulu,HI,96822-2447
+5630 Mission St,San Francisco,San Francisco,CA,94112-4220
+479 Washington Blvd,Belpre,Washington,OH,45714-2460
+27500 E Timberline Rd,Government Camp,Clackamas,OR,97028-9709
+32 W 29th St,Hialeah,Miami-Dade,FL,33012-5702
+950 W Mesquite Blvd,Mesquite,Clark,NV,89027-5204
+1500 Van Ness Ave,Reno,Washoe,NV,89503-1336
+707 Tonnelle Ave,North Bergen,Hudson,NJ,07047-1508
+18 Queens Blvd,Powell,Park,WY,82435-3169
+9519 E Market St,Warren,Trumbull,OH,44484-5599
+TWO Waterfront Plz,Honolulu,Honolulu,HI,96813-4920
+810 1st Ave,Duluth,Saint Louis,MN,55810-2602
+310 W Broadway,Cedarhurst,Nassau,NY,11516-1402
+966 S Outer Dr,Morristown,Hamblen,TN,37814-2845
+16805 NW 12Th Ave,Miami,Miami-Dade,FL,33169-5702
+3000 Enterprise Dr,Durant,Bryan,OK,74701-2189
+290 Macon Ave,Asheville,Buncombe,NC,28804-3711
+29200 Tuckers Grade,Punta Gorda,Charlotte,FL,33955-2207
+120 Hickey Blvd,South San Francisco,San Mateo,CA,94080-1144
+118 Texas Rd,South Bristol,Lincoln,ME,04568-4122
+926 Main St Ste 21,Billings,Yellowstone,MT,59105-3359
+1057 Steiner St,San Francisco,San Francisco,CA,94115-4620
+1200 S Central Ave,Sidney,Richland,MT,59270-5222
+744 SW 206th Pl,Beaverton,Washington,OR,97003-6555
+106 Hall St,Whitesboro,Grayson,TX,76273-1612
+27107 S Highway St,Oakland,Pottawattamie,IA,51560-4361
+744 E 500 S Unit 206,American Fork,Utah,UT,84003-3040
+1100 State Road 8,Garrett,Dekalb,IN,46738-9626
+111 3rd St,Oakland,Alameda,CA,94607-4360
+650 15th St,Manhattan Beach,Los Angeles,CA,90266-4805
+12042 W Broad St,Henrico,Henrico,VA,23233-7689
+210 Us Highway 27 N,South Bay,Palm Beach,FL,33493-1818
+859 Old Route 66,Saint Robert,Pulaski,MO,65584-3732
+1916 W 3rd St,Williamsport,Lycoming,PA,17701-7808
+1100 Stonecoal Rd,Garrett,Floyd,KY,41630-8978
+2160 Francisco Blvd,Pacifica,San Mateo,CA,94044-2519
+45 Mayor Aitken Dr,Bridgeton,Cumberland,NJ,08302-1347
+3472 Plainfield Ave NE,Grand Rapids,Kent,MI,49525-2767
+27107 S Highway 170,Canby,Clackamas,OR,97013-9117
+2400 Mystic Lake Blvd,Prior Lake,Scott,MN,55372-9004
+24105 Michigan Ave,Dearborn,Wayne,MI,48124-1801
+24919 Interstate 45 Ste 1057,Spring,Montgomery,TX,77380-3018
+315 Dartmouth Dr Unit 1280,Marshalls Creek,Monroe,PA,18335-5049
+2515 E Butler Ave,Kingman,Mohave,AZ,86409-1051
+1707 69th St,Keystone,Benton,IA,52249-9669
+506 S Oakland St,Webb City,Jasper,MO,64870-2449
+1 River Boat Dr,New Castle,Garfield,CO,81647-9464
+600 Highland Dr Ste 618,Mount Holly,Burlington,NJ,08060-5124
+1300 Fulton St W,Grand Rapids,Kent,MI,49504-6100
+11111 N 7th St,Phoenix,Maricopa,AZ,85020-1176
+210 Ford Rd,Notasulga,Macon,AL,36866-4110
+2930 Forest Ln,Willoughby,Lake,OH,44094-9109
+54 Edge Ln,Ragland,Saint Clair,AL,35131-5133
+1103 Riverside Dr,Painesville,Lake,OH,44077-5210
+500 Center Dr NW,Grand Rapids,Kent,MI,49544-6920
+2176 Birch Sq,Lake Havasu City,Mohave,AZ,86403-6707
+3920 Club Dr Apt 1000,Duluth,Gwinnett,GA,30096-8299
+1650 S Casino Dr,Laughlin,Clark,NV,89029-1512
+2135 Natural Bridge Rd,Tallahassee,Leon,FL,32305-1804
+1989 Front St,Toledo,Lucas,OH,43605-1225
+751 Airport Blvd,Morrisville,Wake,NC,27560-9155
+260 S Main St,Peoria,Peoria,IL,61604-5771
+100 E Main St,Decatur,Macon,IL,62523-1205
+308 Avenue V NE,Winter Haven,Polk,FL,33881-1646
