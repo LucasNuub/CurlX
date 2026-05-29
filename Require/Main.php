@@ -41,161 +41,65 @@ function GetLiveRes($SearchHere, $LivesResponses, $DefinedRes = false, $ThisRes 
   $DefineRes = (empty($DefineRes)) ? 'DEAD' : ['LIVE', $DefineRes];
   return $DefineRes;
 }
-function Random_Dates()
+function Random_Dates(): array
 {
-  $arrContextOptions = array(
-    "ssl" => array(
-      "verify_peer" => false,
-      "verify_peer_name" => false,
-    ),
-  );
+  $context = stream_context_create(['ssl' => ['verify_peer' => false, 'verify_peer_name' => false]]);
 
-  $ram = NULL;
+  do {
+    $get = file_get_contents('https://randomuser.me/api/1.2/?nat=us', false, $context);
+  } while (empty($get));
 
-  while (!$ram) {
-    $get = file_get_contents('https://randomuser.me/api/1.2/?nat=us', false, stream_context_create($arrContextOptions));
-    $infos = json_decode($get, 1);
-    $name = $infos['results'][0]['name']['first'];
-    $last = $infos['results'][0]['name']['last'];
-    $email = $infos['results'][0]['email'];
-    $zip = $infos['results'][0]['location']['postcode'];
-    $phone = $infos['results'][0]['phone'];
-    $street = $infos['results'][0]['location']['street'];
-    $city = $infos['results'][0]['location']['city'];
-    $state = $infos['results'][0]['location']['state'];
-    $phone = preg_replace('/[^0-9]/', '', $phone);
-    $serve_arr = array("gmail.com");
-    $serv_rnd = $serve_arr[array_rand($serve_arr)];
-    $emaill = explode('@', $email)[0];
-    $emailram = rand(0, 3);
-    if ($emailram == '2') {
-      $email = $emaill . rand(0, 999) . "@" . $serv_rnd;
-    } elseif ($emailram == '3') {
-      $email = str_replace('example.com', $serv_rnd, $email);
-      $email = '' . rand(0, 999) . '' . $email . '';
-    } else {
-      $tryconfu  = ($emailram == '1') ? "." . rand(0, 999) : rand(0, 999) . ".";
-      $email = str_replace('.', $tryconfu, $emaill);
-      $email = "$email@" . $serv_rnd;
-    }
-    if (!empty($get)) {
-      $ram = true;
-    }
-  }
+  $data   = json_decode($get, true)['results'][0];
+  $name   = $data['name']['first'];
+  $last   = $data['name']['last'];
+  $email  = $data['email'];
+  $zip    = $data['location']['postcode'];
+  $phone  = preg_replace('/[^0-9]/', '', $data['phone']);
+  $street = $data['location']['street'];
+  $city   = $data['location']['city'];
+  $state  = $data['location']['state'];
 
-  if ($state == "alabama") {
-    $stateAB = "AL";
-  } else if ($state == "alaska") {
-    $stateAB = "AK";
-  } else if ($state == "arizona") {
-    $stateAB = "AR";
-  } else if ($state == "california") {
-    $stateAB = "CA";
-  } else if ($state == "colorado") {
-    $stateAB = "CO";
-  } else if ($state == "connecticut") {
-    $stateAB = "CT";
-  } else if ($state == "delaware") {
-    $stateAB = "DE";
-  } else if ($state == "district of columbia") {
-    $stateAB = "DC";
-  } else if ($state == "florida") {
-    $stateAB = "FL";
-  } else if ($state == "georgia") {
-    $stateAB = "GA";
-  } else if ($state == "hawaii") {
-    $stateAB = "HI";
-  } else if ($state == "idaho") {
-    $stateAB = "ID";
-  } else if ($state == "illinois") {
-    $stateAB = "IL";
-  } else if ($state == "indiana") {
-    $stateAB = "IN";
-  } else if ($state == "iowa") {
-    $stateAB = "IA";
-  } else if ($state == "kansas") {
-    $stateAB = "KS";
-  } else if ($state == "kentucky") {
-    $stateAB = "KY";
-  } else if ($state == "louisiana") {
-    $stateAB = "LA";
-  } else if ($state == "maine") {
-    $stateAB = "ME";
-  } else if ($state == "maryland") {
-    $stateAB = "MD";
-  } else if ($state == "massachusetts") {
-    $stateAB = "MA";
-  } else if ($state == "michigan") {
-    $stateAB = "MI";
-  } else if ($state == "minnesota") {
-    $stateAB = "MN";
-  } else if ($state == "mississippi") {
-    $stateAB = "MS";
-  } else if ($state == "missouri") {
-    $stateAB = "MO";
-  } else if ($state == "montana") {
-    $stateAB = "MT";
-  } else if ($state == "nebraska") {
-    $stateAB = "NE";
-  } else if ($state == "nevada") {
-    $stateAB = "NV";
-  } else if ($state == "new hampshire") {
-    $stateAB = "NH";
-  } else if ($state == "new jersey") {
-    $stateAB = "NJ";
-  } else if ($state == "new mexico") {
-    $stateAB = "NM";
-  } else if ($state == "new york") {
-    $stateAB = "LA";
-  } else if ($state == "north carolina") {
-    $stateAB = "NC";
-  } else if ($state == "north dakota") {
-    $stateAB = "ND";
-  } else if ($state == "ohio") {
-    $stateAB = "OH";
-  } else if ($state == "oklahoma") {
-    $stateAB = "OK";
-  } else if ($state == "oregon") {
-    $stateAB = "OR";
-  } else if ($state == "pennsylvania") {
-    $stateAB = "PA";
-  } else if ($state == "rhode Island") {
-    $stateAB = "RI";
-  } else if ($state == "south carolina") {
-    $stateAB = "SC";
-  } else if ($state == "south dakota") {
-    $stateAB = "SD";
-  } else if ($state == "tennessee") {
-    $stateAB = "TN";
-  } else if ($state == "texas") {
-    $stateAB = "TX";
-  } else if ($state == "utah") {
-    $stateAB = "UT";
-  } else if ($state == "vermont") {
-    $stateAB = "VT";
-  } else if ($state == "virginia") {
-    $stateAB = "VA";
-  } else if ($state == "washington") {
-    $stateAB = "WA";
-  } else if ($state == "west virginia") {
-    $stateAB = "WV";
-  } else if ($state == "wisconsin") {
-    $stateAB = "WI";
-  } else if ($state == "wyoming") {
-    $stateAB = "WY";
+  $local   = explode('@', $email)[0];
+  $variant = rand(0, 3);
+  if ($variant === 2) {
+    $email = $local . rand(0, 999) . '@gmail.com';
+  } elseif ($variant === 3) {
+    $email = rand(0, 999) . str_replace('example.com', 'gmail.com', $email);
   } else {
-    $stateAB = "KY";
+    $sep   = ($variant === 1) ? '.' . rand(0, 999) : rand(0, 999) . '.';
+    $email = str_replace('.', $sep, $local) . '@gmail.com';
   }
+
+  $stateMap = [
+    'alabama'             => 'AL', 'alaska'              => 'AK', 'arizona'             => 'AR',
+    'california'          => 'CA', 'colorado'            => 'CO', 'connecticut'         => 'CT',
+    'delaware'            => 'DE', 'district of columbia'=> 'DC', 'florida'             => 'FL',
+    'georgia'             => 'GA', 'hawaii'              => 'HI', 'idaho'               => 'ID',
+    'illinois'            => 'IL', 'indiana'             => 'IN', 'iowa'                => 'IA',
+    'kansas'              => 'KS', 'kentucky'            => 'KY', 'louisiana'           => 'LA',
+    'maine'               => 'ME', 'maryland'            => 'MD', 'massachusetts'       => 'MA',
+    'michigan'            => 'MI', 'minnesota'           => 'MN', 'mississippi'         => 'MS',
+    'missouri'            => 'MO', 'montana'             => 'MT', 'nebraska'            => 'NE',
+    'nevada'              => 'NV', 'new hampshire'       => 'NH', 'new jersey'          => 'NJ',
+    'new mexico'          => 'NM', 'new york'            => 'LA', 'north carolina'      => 'NC',
+    'north dakota'        => 'ND', 'ohio'                => 'OH', 'oklahoma'            => 'OK',
+    'oregon'              => 'OR', 'pennsylvania'        => 'PA', 'rhode island'        => 'RI',
+    'south carolina'      => 'SC', 'south dakota'        => 'SD', 'tennessee'           => 'TN',
+    'texas'               => 'TX', 'utah'                => 'UT', 'vermont'             => 'VT',
+    'virginia'            => 'VA', 'washington'          => 'WA', 'west virginia'       => 'WV',
+    'wisconsin'           => 'WI', 'wyoming'             => 'WY',
+  ];
+
   return [
     'name'    => $name,
     'last'    => $last,
     'city'    => $city,
     'state'   => $state,
-    'stateAB' => $stateAB,
+    'stateAB' => $stateMap[strtolower($state)] ?? 'KY',
     'zip'     => $zip,
-    'address'  => $street,
+    'address' => $street,
     'phone'   => $phone,
-    'email'   => $email
+    'email'   => $email,
   ];
 }
 function HandleSR($result)
@@ -213,43 +117,35 @@ function HandleSR($result)
 
 function SolveRecaptcha($site_key, $site, $fields, $mode = 'recaptchav2', $args = [])
 {
-  $main_fields = [
-    'websiteKey' => $site_key,
-    'websiteURL' => $site
-  ];
+  $base   = ['websiteKey' => $site_key, 'websiteURL' => $site];
+  $fields = (is_array($fields) && count($fields) > 0) ? $fields + $base : $base;
 
-  $fields = (is_array($fields) && count($fields) > 0) ? $fields + $main_fields : $main_fields;
-
-  /**
-   * s or rqdata
-   */
   if (!empty($args['s_data'][1])) {
     $fields = array_merge($fields, ['enterprisePayload' => (object)[$args['s_data'][0] => $args['s_data'][1]]]);
   }
 
-  if (!in_array($mode, ['recaptchav2', 'recaptchav2proxyless', 'recaptchav2enterprise', 'recaptchav2enterpriseproxyless', 'recaptchav3proxyless', 'recaptchav3', 'recaptchav3enterprise', 'recaptchav3enterpriseproxyless', 'recaptchav3M1', 'hcaptchaturbo', 'hcaptchaproxyless', 'hcaptcha', 'hcaptchaenterprise', 'hcaptchaenterpriseproxyless', 'mtcaptcha', 'mtcaptchaproxyless', 'anticloudflare', 'aws_waf'])) {
+  $validModes = [
+    'recaptchav2', 'recaptchav2proxyless', 'recaptchav2enterprise', 'recaptchav2enterpriseproxyless',
+    'recaptchav3proxyless', 'recaptchav3', 'recaptchav3enterprise', 'recaptchav3enterpriseproxyless',
+    'recaptchav3M1', 'hcaptchaturbo', 'hcaptchaproxyless', 'hcaptcha', 'hcaptchaenterprise',
+    'hcaptchaenterpriseproxyless', 'mtcaptcha', 'mtcaptchaproxyless', 'anticloudflare', 'aws_waf',
+  ];
+  if (!in_array($mode, $validModes)) {
     ReturnMessage('Invalid mode');
   }
 
-  $solver = new \CapSolver\CapSolver('CAP-zzzzzzzz');
-  $tries = -1;
+  $solver  = new \CapSolver\CapSolver('CAP-zzzzzzzz');
+  $tries   = 0;
+  $re_code = null;
+
   do {
-    $tries++;
-    if ($tries == '8') ReturnMessage('No se pudo saltar el captcha');
-
-    if(isset($args['no_proxy'])){
-    if ($fields['proxy'] !== NULL and $tries > 2) {
-      #$fields['proxy'] = ProxysConfig::GetProxyFormat(ProxyHelper::GATEWAY());
-    }
-  }
-
+    if ($tries === 8) ReturnMessage('No se pudo saltar el captcha');
     try {
-      $result = $solver->$mode($fields);
-    } catch (\Exception $e) {
-      #Bolt::SaveData(sprintf("Exception caught(Site: {$site}): %s", $e->getMessage()), 'exceptions_capsolver.txt');
-    }
-    $re_code = HandleSR($result);
-  } while ($re_code === NULL);
+      $re_code = HandleSR($solver->$mode($fields));
+    } catch (\Exception $e) {}
+    $tries++;
+  } while ($re_code === null);
+
   return $re_code;
 }
 function GetResponse($status, $response){
