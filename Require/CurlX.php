@@ -157,11 +157,12 @@ class CurlX
      * 
      * @return void
      */
-    public static function DeleteCookie() : void 
+    public static function DeleteCookie() : void
     {
-        if (empty(self::$current_dir))
+        if (empty(self::$current_dir)) {
             trigger_error("Cookie function (SetCookie) was not called!", E_USER_WARNING);
             return;
+        }
 
         if (is_file(self::$cookie_file)) {
             chmod(self::$cookie_file, 0644);
